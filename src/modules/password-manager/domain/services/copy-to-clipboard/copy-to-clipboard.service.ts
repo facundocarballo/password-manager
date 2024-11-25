@@ -1,4 +1,4 @@
-import clipboardy from "clipboardy";
+// import clipboardy from "clipboardy";
 import { CopyToClipboardInput } from "./copy-to-clipboard.input";
 import { DomainServiceException } from "../../exceptions/domain-service-exception";
 import {
@@ -11,7 +11,9 @@ export class CopyToClipboardService {
     input: CopyToClipboardInput
   ): Promise<CopyToClipboardOutput> {
     try {
-      await clipboardy.write(input.text);
+      console.log("Text to copy: ", input.text);
+      // TODO: Dont work because clipboardy must use require instead of import :(
+      // await clipboardy.write(input.text);
       return new CopyToClipboardResponseOk();
     } catch (err) {
       return new DomainServiceException("CopyToClipboardService", "execute");

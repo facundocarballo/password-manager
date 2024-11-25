@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc",
+    "clean": "rm -rf build && rm -rf coverage",
+    "build": "npm run clean && tsc",
     "start": "node build/src/index.js"
   },
   "keywords": [],
@@ -12,6 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.9.3",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.2"
   },
   "dependencies": {
