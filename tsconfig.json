@@ -12,11 +12,8 @@
     "resolveJsonModule": true,
     "rootDir": "./",
     "baseUrl": ".",
-    "paths": {
-      "#*": ["./src/*"]
-    },
     "strict": true,
     "skipLibCheck": true
   },
-  "exclude": ["node_modules", "build", "jest.config.js"]
+  "exclude": ["node_modules", "build"]
 }
